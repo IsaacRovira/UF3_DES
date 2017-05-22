@@ -13,8 +13,7 @@ if(!session_id()){session_start();}
 		<?php require_once("connection.php"); ?>
 		<?php
 		
-		if(isset($_POST["usuario"])){
-			//die("is post");
+		if(isset($_POST["usuario"])){			
 			
 			if(!empty($_POST['usuario']) && !empty($_POST['clave']) && !empty($_POST['email']) && !empty($_POST['apellidos']) && !empty($_POST['nombre'])){
 				
@@ -39,7 +38,7 @@ if(!session_id()){session_start();}
 						}elseif($dbusuario === $usuario){
 							print("<script>alert('Ya existe un usuario  ".$dbusuario." en la base de datos');</script>");
 						}else{
-							print("<script>alert('El email ".$dbemail." ya ha había sido registrado para otro usuario.');</script>");
+							print("<script>alert('El email ".$dbemail." ya está registrado para otro usuario.');</script>");
 						}
 						$resultado->free();
 						
@@ -47,8 +46,7 @@ if(!session_id()){session_start();}
 
 						$query_insert="INSERT INTO users (username, name, surname, email, useractive, userpass, userlevel) values ('".$usuario."','".$nombre."','".$apellidos."','".$email."',true,'".md5($clave)."',4)";
 
-						if($connect->query($query_insert)){
-							$_SESSION["registro_completo"]='done';
+						if($connect->query($query_insert)){							
 							header("Location: login.php");
 						}else{							
 							print("<script>alert('Error insertando datos: ".$connect->error."');</script>");

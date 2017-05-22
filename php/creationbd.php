@@ -1,5 +1,5 @@
 <?php
-
+if(!session_id()){session_start();}
 // Creación de la base de datos
 
 requiere_once 'creationdb_queries.php';

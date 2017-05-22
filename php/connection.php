@@ -1,5 +1,5 @@
 <?php
-
+if(!session_id()){session_start();}
 require_once("dbconfig.php");
 
 // Utilizamos la función new mysqli(host, usuario, pass) para la conexión.

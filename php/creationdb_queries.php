@@ -1,5 +1,5 @@
 <?php
-
+if(!session_id()){session_start();}
 //Queries para la creación de la base de datos
 
 //Crear la base de datos y eliminar las tablas si existiesen....

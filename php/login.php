@@ -12,10 +12,6 @@ if(!session_id()){session_start();}
         <?php
 
 		require_once 'connection.php';
-				
-		if(isset($_SESSION['info'])){
-			print($_SESSION['info']);
-		}
 		
 		if(isset($_POST["usuario"])){					
 			$query = "select * from users where username ='".$_POST['usuario']."' and userpass = '".md5($_POST['password'])."'";

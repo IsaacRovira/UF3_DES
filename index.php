@@ -17,7 +17,7 @@ if(!session_id()){
 			//echo("<p> Nombre:" . session_name() . "</p>");
 			//echo("<p> ID:" . session_id() . "</p>");
 		?>
-		<h1>ACTIVIDAD PRACTICA UF3</h1>
+		<h1>ACTIVIDAD PRACTICA UF3 (DES)</h1>
 		<h3>INICIO DE SESION</h3>
 		<h4><u>Bienvendio</u></h4>
 		<p>Elige una de las siguientes opciones:</p>
